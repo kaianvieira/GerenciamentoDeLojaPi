@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kakav\\source\\repos\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj": {}
+    "C:\\GerenciamentoDeLojaPi\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kakav\\source\\repos\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj": {
+    "C:\\GerenciamentoDeLojaPi\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kakav\\source\\repos\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj",
+        "projectUniqueName": "C:\\GerenciamentoDeLojaPi\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj",
         "projectName": "GerenciamentoDeLojaPI",
-        "projectPath": "C:\\Users\\kakav\\source\\repos\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj",
+        "projectPath": "C:\\GerenciamentoDeLojaPi\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj",
         "packagesPath": "C:\\Users\\kakav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kakav\\source\\repos\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI\\obj\\",
+        "outputPath": "C:\\GerenciamentoDeLojaPi\\GerenciamentoDeLojaPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

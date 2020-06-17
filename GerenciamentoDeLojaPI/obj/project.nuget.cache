@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jafZ2mWmJ52rxFyddfL8+c0u5i/K1tEea3hA0qKlgMctYa4zMtl82I4at6MnztjUpWuJeAZ1N9JvW6sT9TPTUg==",
+  "dgSpecHash": "9HHzbgt1gW+RW7wStGVEqoM0c/SCntDXkz6CGFCPrDPaI2iJMkIJ077XlM8D0GFsSJY0DQtz0h5fqnTc9RUDwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kakav\\source\\repos\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj",
+  "projectFilePath": "C:\\GerenciamentoDeLojaPi\\GerenciamentoDeLojaPI\\GerenciamentoDeLojaPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kakav\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
