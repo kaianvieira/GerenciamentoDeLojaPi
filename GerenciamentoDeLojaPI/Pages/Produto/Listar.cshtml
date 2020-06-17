@@ -1,0 +1,100 @@
+﻿@page
+@model GerenciamentoDeLojaPI.Pages.Produto.ListarModel
+@{
+    ViewData["Title"] = "Listar Produtos";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-filled">
+            <div class="panel-heading">
+                <div class="panel-tools">
+                    <a class="panel-toggle"><i class="fa fa-chevron-up"></i></a>
+                    <a class="panel-close"><i class="fa fa-times"></i></a>
+                </div>
+                Produtos
+            </div>
+            <div class="panel-body">
+                <p>
+                    <a asp-page="Incluir" class="btn btn-w-md btn-accent">+ Produto</a>
+                </p>
+                <hr>
+                <table id="tb-principal" class="table table-striped table-hover table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(x => x.Produto.Tipo)</th>
+                            <th>@Html.DisplayNameFor(x => x.Produto.IdSetor)</th>
+                            <th>@Html.DisplayNameFor(x => x.Produto.Tamanho)</th>
+                            <th>@Html.DisplayNameFor(x => x.Produto.Cor)</th>
+                            <th>@Html.DisplayNameFor(x => x.Produto.IdMarca)</th>
+                            <th>@Html.DisplayNameFor(x => x.Produto.IdFornecedor)</th>
+                            <th>@Html.DisplayNameFor(x => x.Produto.IdFuncionario)</th>
+                            @if (Model.Lista.Count() > 0)
+                            {
+                                <th class="no-sort"></th>
+                                <th class="no-sort"></th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Lista)
+                        {
+                            <tr>
+                                <td>@item.Tipo.Nome</td>
+                                <td>@item.Setor.Nome</td>
+                                <td>@item.Tamanho</td>
+                                <td>@item.Cor</td>
+                                <td>@item.Marca.Nome</td>
+                                <td>@item.Fornecedor.Nome</td>
+                                <td>@item.Funcionario.Nome</td>
+
+                                @if (Model.Lista.Count() > 0)
+                                {
+                                    <td style="text-align: center">
+                                        <a class="btn btn-outline btn-warning btn-xs" role="button" asp-page="Alterar" asp-route-id="@item.Id">Alterar</a>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <a class="btn btn-outline btn-danger btn-xs" role="button" asp-page="Excluir" asp-route-id="@item.Id">Remover</a>
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#tb-principal').DataTable({
+                language: {
+                    "lengthMenu": "Mostrando _MENU_ registros por página",
+                    "zeroRecords": "Nenhum registro encontrado",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "Não há registros disponíveis",
+                    "infoFiltered": "(filtrando de _MAX_ registros totais)",
+                    "search": "Buscar",
+                    "loadingRecords": "Carregando...",
+                    "processing": "Processando...",
+                    "paginate": {
+                        "first": "Primeira",
+                        "last": "Ultima",
+                        "next": "Próxima",
+                        "previous": "Anterior"
+                    },
+                },
+                pageLength: 10,
+                responsive: true,
+                "columnDefs": [{
+                    "targets": 'no-sort',
+                    "orderable": false,
+                }
+                ]
+            });
+        });
+    </script>
+}

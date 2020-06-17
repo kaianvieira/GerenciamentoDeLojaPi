@@ -1,0 +1,55 @@
+﻿@page
+@model GerenciamentoDeLojaPI.Pages.Produto.ExcluirModel
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-filled">
+            <div class="panel-heading">
+                <div class="panel-tools">
+                    <a class="panel-toggle"><i class="fa fa-chevron-up"></i></a>
+                    <a class="panel-close"><i class="fa fa-times"></i></a>
+                </div>
+                Excluir Produto
+            </div>
+            <div class="panel-body">
+                <form asp-page="Excluir" asp-route-id="@Model.Produto.Id" method="post">
+                    <input type="hidden" asp-for="Produto.Id" />
+                    <div class="form-group">
+                        <label asp-for="Produto.Tamanho"></label>
+                        <input type="text" asp-for="Produto.Tamanho" asp- class="form-control" placeholder="@Model.Tamanho" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Produto.Cor"></label>
+                        <input type="text" asp-for="Produto.Cor" asp- class="form-control" placeholder="@Model.Cor" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Produto.IdTipo"></label>
+                        <select class="form-control" asp-for="Produto.IdTipo" asp-items="Model.ListaTipos" disabled></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Produto.IdSetor"></label>
+                        <select class="form-control" asp-for="Produto.IdSetor" asp-items="Model.ListaSetor" disabled></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Produto.IdMarca"></label>
+                        <select class="form-control" asp-for="Produto.IdMarca" asp-items="Model.ListaMarcas" disabled></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Produto.IdFornecedor"></label>
+                        <select class="form-control" asp-for="Produto.IdFornecedor" asp-items="Model.ListaFornecedor" disabled></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Produto.IdFuncionario"></label>
+                        <select class="form-control" asp-for="Produto.IdFuncionario" asp-items="Model.ListaFuncionarios" disabled></select>
+                    </div>
+                    <a asp-page="Listar" class="btn btn-default mr-1">Voltar</a>
+                    <button type="submit" class="btn btn-accent">Excluir</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="view-header">
+            <div class="pull-right text-right" style="line-height: 14px">
+                <small>Projeto Integrado<br>Gerenciamento de Loja<br> <span class="c-white">v.1.0</span></small>
+            </div>
+            <div class="header-icon">
+                <i class="pe page-header-icon pe-7s-server"></i>
+            </div>
+            <div class="header-title">
+                <h3 class="m-b-xs">Projeto Integrado</h3>
+                <small>
+                    Projeto de Gerenciamento de loja para administração de produtos, marcas e gerenciamento de fornecedores.
+                </small>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    @foreach (var item in Model.Produtos)
+    {
+        <div class="col-md-3">
+            <div class="panel panel-filled">
+
+                <div class="panel-body">
+                    <h2 class="m-b-none">
+                        @item.Tipo.Nome
+                    </h2>
+
+                    <div class="small">@item.Marca.Nome</div>
+                    <div class="small">Tamanho: @item.Tamanho</div>
+                    <div class="small">Cor: @item.Cor</div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
